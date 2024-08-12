@@ -1,9 +1,10 @@
 import dynamic from "next/dynamic";
 import { SurveyData } from "../types";
+import { Socket } from "socket.io-client";
 
 interface SurveyComponentProps {
   data: SurveyData;
-  socket: any;
+  socket: Socket;
   surveyVisible: boolean;
 }
 
