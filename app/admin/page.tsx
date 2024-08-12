@@ -31,12 +31,14 @@ export default function AdminPage() {
     socket.emit("select_survey", survey);
   };
 
+  const url = "http://localhost:3000/";
+
   return (
     <div className="flex flex-col h-screen items-center justify-center">
       <div className="flex items-center my-20">
-        {/* <QRCode value={url} size={64} className="mr-4" /> */}
+        <QRCode value={url} size={64} className="mr-4" />
         <h1 className="text-5xl font-bold">Admin Survey Control</h1>
-        {/* <QRCode value={url} size={64} className="ml-4" /> */}
+        <QRCode value={url} size={64} className="ml-4" />
       </div>
       <div className="flex space-x-4">
         <button
