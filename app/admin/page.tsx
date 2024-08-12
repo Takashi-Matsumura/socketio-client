@@ -70,7 +70,7 @@ export default function AdminPage() {
           Survey 2
         </button>
       </div>
-      <div className="flex flex-col h-screen w-full items-center p-3">
+      {/* <div className="flex flex-col h-screen w-full items-center p-3">
         {survey?.id != null && (
           <SurveyComponent
             data={survey}
@@ -78,7 +78,7 @@ export default function AdminPage() {
             surveyVisible={false}
           />
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
