@@ -31,7 +31,7 @@ export default function AdminPage() {
     socket.emit("select_survey", survey);
   };
 
-  const url = "http://localhost:3002/";
+  const url = "http://localhost:3003/";
 
   return (
     <div className="flex flex-col h-screen items-center justify-center">
