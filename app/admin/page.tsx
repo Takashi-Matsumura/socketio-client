@@ -15,8 +15,6 @@ export default function AdminPage() {
   const [survey, setSurvey] = useState<SurveyData | null>(null);
   const [selectedSurvey, setSelectedSurvey] = useState("survey1");
 
-  const currentUrl = ""; //window.location.href.replace("/admin", "");
-
   useEffect(() => {
     socket.on("survey_changed", (data) => {
       console.log(data);
@@ -33,7 +31,7 @@ export default function AdminPage() {
     socket.emit("select_survey", survey);
   };
 
-  const url = window.location.href.replace("/admin", "");
+  const url = "http://localhost:3000"; //window.location.href.replace("/admin", "");
 
   return (
     <div className="flex flex-col h-screen items-center justify-center">
