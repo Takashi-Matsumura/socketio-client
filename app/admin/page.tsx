@@ -31,7 +31,11 @@ export default function AdminPage() {
     socket.emit("select_survey", survey);
   };
 
-  const url = "http://localhost:3000"; //window.location.href.replace("/admin", "");
+  // クライアントサイドでのみ URL を設定
+  const url =
+    typeof window !== "undefined"
+      ? window.location.href.replace("/admin", "")
+      : "http://localhost:3000";
 
   return (
     <div className="flex flex-col h-screen items-center justify-center">
